@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Style source: https://github.com/simonlc/Markdown-CSS -->
+  <style>
+    html {
+      font-size: 100%;
+      overflow-y: scroll;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    body {
+      color: #444;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      line-height: 1.5em;
+      padding: 1em;
+      margin: auto;
+      max-width: 1000px;
+      background: #fefefe;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+      color: #111;
+      line-height: 1em;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+    }
+
+    /* h1,
+    h2 {
+      display: flex;
+      flex-direction: row;
+    } */
+
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    /* h1:before,
+    h1:after,
+    h2:before,
+    h2:after {
+      content: "";
+      flex: 1 1;
+      border-bottom: 1px solid;
+      margin: auto;
+    }
+
+    h1:before,
+    h2:before {
+      margin-right: 10px
+    }
+
+    h1:after,
+    h2:after {
+      margin-left: 10px
+    } */
+
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    h6 {
+      font-size: 0.9em;
+    }
+
+    blockquote {
+      color: #666666;
+      margin: 0;
+      padding-left: 3em;
+      border-left: 0.5em #eee solid;
+    }
+
+    hr {
+      display: block;
+      border: 0;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #eee;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 0;
+    }
+
+    pre,
+    code,
+    kbd,
+    samp {
+      color: #000;
+      font-family: monospace, monospace;
+      _font-family: 'courier new', monospace;
+      font-size: 0.98em;
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    b,
+    strong {
+      font-weight: bold;
+    }
+
+    dfn {
+      font-style: italic;
+    }
+
+    ins {
+      background: #ff9;
+      color: #000;
+      text-decoration: none;
+    }
+
+    mark {
+      background: #ff0;
+      color: #000;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    ul,
+    ol {
+      margin: 1em 0;
+      padding: 0 0 0 2em;
+    }
+
+    li p:last-child {
+      margin: 0;
+    }
+
+    dd {
+      margin: 0 0 0 2em;
+    }
+
+    hr {
+      border-top: 1px solid black;
+      border-bottom: none;
+    }
+
+    img {
+      border: 0;
+      -ms-interpolation-mode: bicubic;
+      vertical-align: middle;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    @media only screen and (min-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    /* audio {
+      width: 128px;
+    } */
+
+    .audio-item-container {
+      text-align: center;
+    }
+
+    .audio-item-container div {
+      width: 300px;
+      height: 100px;
+      display: inline-block;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .col-header {
+      width: 80px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+</html>
+
+<body>
+  <h1>Vogen Vocoder V01</h1>
+
+  <p>
+    Audio demo page for “Improving Upon Existing Source-Filter Vocoder Using Neural Methods for Fast, High-Fidelity
+    Singing Voice Synthesis”
+  </p>
+
+  <hr />
+
+  <h2>Female Singers</h2>
+  <div class="audio-group-container">
+    <h3>BA KGZW 057+7</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 BA KGZW 057+7.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W BA KGZW 057+7.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V BA KGZW 057+7.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H BA KGZW 057+7.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I BA KGZW 057+7.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U BA KGZW 057+7.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>DA SXQN 004+7</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 DA SXQN 004+7.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W DA SXQN 004+7.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V DA SXQN 004+7.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H DA SXQN 004+7.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I DA SXQN 004+7.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U DA SXQN 004+7.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>EU CCNN 058+8</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 EU CCNN 058+8.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W EU CCNN 058+8.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V EU CCNN 058+8.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H EU CCNN 058+8.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I EU CCNN 058+8.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U EU CCNN 058+8.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>LC FHCB 031+8</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 LC FHCB 031+8.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W LC FHCB 031+8.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V LC FHCB 031+8.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H LC FHCB 031+8.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I LC FHCB 031+8.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U LC FHCB 031+8.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>NH JQ 000+7</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 NH JQ 000+7.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W NH JQ 000+7.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V NH JQ 000+7.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H NH JQ 000+7.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I NH JQ 000+7.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U NH JQ 000+7.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>CY BSJXGG 243+6 (Unseen vocal range)</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 CY BSJXGG 243+6.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W CY BSJXGG 243+6.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V CY BSJXGG 243+6.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H CY BSJXGG 243+6.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I CY BSJXGG 243+6.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U CY BSJXGG 243+6.m4a"></audio>UnivNet</div>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2>Male Singers</h2>
+  <div class="audio-group-container">
+    <h3>AX SN 046+6</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 AX SN 046+6.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W AX SN 046+6.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V AX SN 046+6.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H AX SN 046+6.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I AX SN 046+6.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U AX SN 046+6.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>DH BMG 045+7</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 DH BMG 045+7.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W DH BMG 045+7.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V DH BMG 045+7.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H DH BMG 045+7.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I DH BMG 045+7.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U DH BMG 045+7.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>DZ CSY 000+6</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 DZ CSY 000+6.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W DZ CSY 000+6.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V DZ CSY 000+6.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H DZ CSY 000+6.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I DZ CSY 000+6.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U DZ CSY 000+6.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>SS AYC 051+7</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 SS AYC 051+7.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W SS AYC 051+7.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V SS AYC 051+7.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H SS AYC 051+7.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I SS AYC 051+7.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U SS AYC 051+7.m4a"></audio>UnivNet</div>
+    </div>
+    <h3>TS TZXS 203+8</h3>
+    <div class="audio-item-container">
+      <div><audio controls preload src="AudioDemo/0 TS TZXS 203+8.m4a"></audio>Reference</div>
+      <div><audio controls preload src="AudioDemo/W TS TZXS 203+8.m4a"></audio>WORLD</div>
+      <div><audio controls preload src="AudioDemo/V TS TZXS 203+8.m4a"></audio>Ours</div>
+      <div><audio controls preload src="AudioDemo/H TS TZXS 203+8.m4a"></audio>HiFi-GAN</div>
+      <div><audio controls preload src="AudioDemo/I TS TZXS 203+8.m4a"></audio>iSTFTNet</div>
+      <div><audio controls preload src="AudioDemo/U TS TZXS 203+8.m4a"></audio>UnivNet</div>
+    </div>
+  </div>
+</body>
+
+</html>
