@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LSRDiT Demo Page</title>
+  <!-- Style source: https://github.com/simonlc/Markdown-CSS -->
+  <style>
+    html {
+      font-size: 100%;
+      overflow-y: scroll;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    body {
+      color: #444;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      line-height: 1.5em;
+      padding: 1em;
+      margin: auto;
+      max-width: 1000px;
+      background: #fefefe;
+    }
+
+    .subtitle {
+      text-align: center;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+      color: #111;
+      line-height: 1em;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+    }
+
+    .separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      font-weight: 700;
+      font-size: 80%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      color: #0005;
+    }
+
+    .separator::before,
+    .separator::after {
+      content: '';
+      flex: 1;
+      border-top: 2px solid #0003;
+      border-bottom: 2px solid #0003;
+      height: 1.5px;
+    }
+
+    .separator:not(:empty)::before {
+      margin-right: 1em;
+    }
+
+    .separator:not(:empty)::after {
+      margin-left: 1em;
+    }
+
+
+    h1 {
+      margin-top: 100px;
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+
+    h6 {
+      font-size: 0.9em;
+    }
+
+    .figure {
+      text-align: center;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .caption {
+      margin-top: 0.5em;
+      text-align: left;
+    }
+
+    blockquote {
+      color: #666666;
+      margin: 0;
+      padding-left: 3em;
+      border-left: 0.5em #eee solid;
+    }
+
+    hr {
+      display: block;
+      border: 0;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #eee;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 0;
+    }
+
+    pre,
+    code,
+    kbd,
+    samp {
+      color: #000;
+      font-family: monospace, monospace;
+      _font-family: 'courier new', monospace;
+      font-size: 0.98em;
+    }
+
+    pre {
+      white-space: pre;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    b,
+    strong {
+      font-weight: bold;
+    }
+
+    dfn {
+      font-style: italic;
+    }
+
+    ins {
+      background: #ff9;
+      color: #000;
+      text-decoration: none;
+    }
+
+    mark {
+      background: #ff0;
+      color: #000;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    ul,
+    ol {
+      margin: 1em 0;
+      padding: 0 0 0 2em;
+    }
+
+    li p:last-child {
+      margin: 0;
+    }
+
+    dd {
+      margin: 0 0 0 2em;
+    }
+
+    hr {
+      border-top: 1px solid black;
+      border-bottom: none;
+    }
+
+    img {
+      border: 0;
+      -ms-interpolation-mode: bicubic;
+      vertical-align: middle;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    @media only screen and (min-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+    /* audio {
+      width: 128px;
+    } */
+
+    .audio-item-container {
+      text-align: center;
+    }
+
+    .audio-item-container div {
+      width: 300px;
+      height: 100px;
+      display: inline-block;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .col-header {
+      width: 80px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+</html>
+
+<body>
+  <h1>LSRDiT - Samples for Linear Spectrogram Reconstruction</h1>
+
+  <p class="subtitle">
+    Demo page for paper “<a href="#">Extending Vocoder Bandwidth for Singing Voice Synthesis with Realistic
+      Spectrogram</a>”
+  </p>
+
+  <p>&nbsp;</p>
+
+  <p><b>Abstract</b> This paper presents a novel approach to enhance the realism of vocoder-generated singing voice
+    audio by addressing the distinguishable differences between synthetic and real-life recordings, particularly in
+    high-frequency spectrogram components. We introduce an explicit linear spectrogram reconstruction step using
+    denoising diffusion process before vocoder processing. By utilizing a refined neural network model architecture
+    based on DiT that specializes in handling time-frequency data, we achieve high-fidelity spectrograms that are
+    challenging for both humans and machine classifiers to differentiate from authentic recordings. Objective and
+    subjective evaluations demonstrate that our reconstructed spectrograms successfully deceive both neural and human
+    classifiers with minimal sacrifice in audio quality. This work presents a substantial advancement in overcoming the
+    limitations of current vocoding techniques, particularly in the context of adversarial attacks on fake spectrogram
+    detection.
+  </p>
+
+  <p>(Under construction)</p>
+
+</body>
+
+</html>
