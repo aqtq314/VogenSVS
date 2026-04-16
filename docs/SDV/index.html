@@ -345,13 +345,11 @@
 </head>
 
 <body id="app">
-  <h1>Spectral Diffusion Vocoder for High-Fidelity Pitch-Accurate Singing Voice Synthesis</h1>
+  <h1>SDV (Spectral Diffusion Vocoder): Audio Samples</h1>
 
-  <p>&nbsp;</p>
-  <div class="figure"><img src="fig-pipeline-overview.png" alt="Synthesis Pipeline" /></div>
-  <div class="caption"><b>Figure</b> showing overview of the updated vocoder pipeline. Red-orange means complex-valued; blue-gray means real-valued.</div>
+  <p class="subtitle">
+    Demo page for paper “<a>Spectral Diffusion Vocoder for High-Fidelity Pitch-Accurate Singing Voice Synthesis</a>”
   </p>
-
 
   <p>&nbsp;</p>
 
@@ -360,9 +358,14 @@
   </p>
 
   <p>&nbsp;</p>
+  <p>
+  <div class="figure"><img src="fig-pipeline-overview.png" alt="Synthesis Pipeline" /></div>
+  <div class="caption"><b>Figure</b> showing overview of the updated vocoder pipeline. Red-orange means complex-valued; blue-gray means real-valued.</div>
+  </p>
+
+  <p>&nbsp;</p>
 
   <template v-for="comparison in [comparisonVocoders, comparisonPhaseRecovery, comparisonPhaseRecoveryInputFps]">
-
 
     <div class="separator"> Separator </div>
 
