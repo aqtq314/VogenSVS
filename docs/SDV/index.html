@@ -348,9 +348,15 @@
   <h1>Spectral Diffusion Vocoder for High-Fidelity Pitch-Accurate Singing Voice Synthesis</h1>
 
   <p>&nbsp;</p>
+  <div class="figure"><img src="fig-pipeline-overview.png" alt="Synthesis Pipeline" /></div>
+  <div class="caption"><b>Figure</b> showing overview of the updated vocoder pipeline. Red-orange means complex-valued; blue-gray means real-valued.</div>
+  </p>
+
+
+  <p>&nbsp;</p>
 
   <p><b>Abstract</b>
-    While generative adversarial networks (GANs) currently dominate vocoder design for singing voice synthesis, denoising diffusion probabilistic models (DDPMs) have shown potential but lag in audio quality. Different from existing diffusion vocoders that typically adopt end-to-end waveform generation conditioned on Mel spectrograms, this paper draws inspiration from recent advancements in GAN-based vocoders that incorporated explicit inverse Short-Time Fourier Transform into their generators, and proposes a novel two-stage diffusion-based vocoder that decouples magnitude spectrogram synthesis from phase recovery. Specifically, our diffusion model generates full-resolution log magnitude spectrogram at high frame rate, intentionally introducing spectral redundancy to simplify phase estimation. This design enables conventional phase recovery algorithms like Griffin-Lim to perform competitively against learned neural phase estimators. Evaluations demonstrate that this streamlined method outperforms existing diffusion vocoders in both audio quality and inference speed by a large margin, while also surpassing GAN-based counterparts in pitch accuracy and audio similarity, especially when handling high-pitched data like opera.
+    While denoising diffusion probabilistic models have proven powerful in many generative tasks, they still lag behind Generative Adversarial Networks (GANs) in vocoder performance, especially when synthesizing singing voice. Existing diffusion vocoders rely on end-to-end waveform reconstruction at linear amplitude scale, which conflicts with the logarithmic nature of human audio perception. This leads to the final denoising step recovering much more information than earlier steps, as reported in existing vocoder studies. To address this, we propose a novel two-stage approach: the first stage uses diffusion to generate a full-resolution log magnitude spectrogram alone, leaving the second stage a typical phase recovery problem. The spectrogram is designed to have increased frame rate, intentionally introducing spectral redundancies to simplify phase recovery, enabling even conventional algorithms like Griffin-Lim to perform nearly on par with neural methods. This results in an efficient, straightforward vocoding pipeline that integrates seamlessly with existing diffusion frameworks, without requiring custom noise schedules or distributions. Experiments demonstrated that this streamlined approach outperformed existing diffusion vocoders in all evaluation metrics by a large margin, while achieving comparable performance to GAN-based counterparts. Moreover, it exhibits particularly outstanding performance on high-pitched vocals like opera.
   </p>
 
   <p>&nbsp;</p>
